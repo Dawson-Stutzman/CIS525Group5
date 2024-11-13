@@ -78,7 +78,7 @@ int main()
 				char temp[MAX - 1];
 
 				//Read in the User Input and handle errors accordingly.
-				if (fgets(s,sizeof(s),stdin) != NULL)
+				if (fgets(s,sizeof(s),stdin) != NULL)		// [FIX] Use SSCANF instead of fgets
 				{
 					char *endOfString;
 					int n;
@@ -220,7 +220,7 @@ int main()
 				{
 					char temp[MAX - 1];
 					// multiword string fgets example found on https://stackoverflow.com/questions/3555108/multiple-word-string-input-through-scanf
-					if (fgets(temp,sizeof(temp),stdin) != NULL)
+					if (fgets(temp,sizeof(temp),stdin) != NULL) 		// [FIX] Use SSCANF instead of fgets
 					{
 						snprintf(s, MAX, "m%s", temp);
 						s[MAX-1] = '\0';
@@ -231,7 +231,7 @@ int main()
 				else if (verified == 0)
 				{
 					char temp[MAX - 1];
-					if (fgets(temp,sizeof(temp),stdin) != NULL)
+					if (fgets(temp,sizeof(temp),stdin) != NULL)			// [FIX] Use SSCANF instead of fgets
 					{
 						snprintf(s, MAX, "u%s", temp);
 						s[MAX-1] = '\0';
@@ -248,7 +248,7 @@ int main()
 			if (FD_ISSET(sockfd, &readset)) 
 			{
 				if ((nread = read(sockfd, s, MAX)) <= 0) {
-					printf("Error reading from server\n");
+					printf("Error reading from server\n"); // [FIX] Might as well exit
 				} else {
 					if (s[0] == 'W')
 					{

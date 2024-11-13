@@ -190,7 +190,7 @@ int main(int argc, char **argv)
 							temp = strtok(s, ";");
 							if (temp != NULL) 
 							{
-								sscanf(temp, "%d", &port);
+								sscanf(temp, "%d", &port);			// [FIX] CHECK THE RETURN VALUE OF SSCANF
 							}
 							snprintf(temp, MAX, "%s", strtok(NULL, ";"));
 							if (temp != NULL)
