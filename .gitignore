@@ -5,6 +5,13 @@
 #Stuff to ignore from VS
 *.json
 *.sqlite
+*.sqlite-journal
+*.vsidx
+*.wsuo
+*.db
+*.db-shm
+*.db-wal
+*.opendb
 
 #--- Other stuff from a C template ---
 
@@ -73,10 +80,3 @@ compile_commands.json
 CTestTestfile.cmake
 _deps
 CMakeUserPresets.json
-*.vsidx
-*.wsuo
-*.db
-*.db-shm
-*.db-wal
-*.opendb
-*.sqlite-journal
